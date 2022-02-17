@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas bank</title>
+   
+    <style>
+        
+         body{
+            border-collapse: collapse;
+            background-color: rgb(0, 0, 255);
+            text-decoration-color: white;
+            border: black;
+            color: white;
+            font-family: cursive;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <br>
+    <div align="center">
+        <h5>Masukan pin</h5>
+        <input type="number"  id="pw" style="background-color: transparent; color: white;">
+        <input type="button" value="Masuk" onclick="huuh()">
+        <input type="button" value="Keluar" onclick="exit()">
+    </div>
+    <div id="options1" style="display: none;">
+   <h1 align="center">ATM BANK KRUT</h1>
+   <h1 align="center">=====================================================================</h1>
+   <div id="saldo"></div>
+   <input type="button" value="Cek saldo" onclick="cek()">
+   <p align="center"><li>PILIH OPSI YANG ANDA INGINKAN</li></p>
+   <div id="article">
+    
+    <br>
+    <details>
+        <summary>Setor Tunai</summary>
+        <select name="set" id="setor">
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
+            <option value="150000">150000</option>
+        </select>
+        <input type="button" value="setor" onclick="fsetor()">
+    </details>
+    <br>
+    <details>
+        <summary>Tarik Tunai</summary>
+        <select name="tar" id="tarik">
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
+            <option value="150000">150000</option>
+        </select>      
+        <input type="button" value="tarik" onclick="ftarik()">
+    </details>
+    <br>
+    <details>
+        <summary>Nabung</summary>
+        <input type="number" id="nabung" value="0" min="0">
+        <input type="button" value="nabung" onclick="fnabung()">
+    </details>
+    <br>
+    <br>
+</div>
+</div>
+<script>
+
+    let rek = 63124080606088;
+    
+    let nama = 'saputra & rahma';
+
+    let saldo = 50000;
+   
+    function huuh(){
+        let pin = 1212;
+        let p = document.getElementById('pw').value;
+
+        if (pin==p) {
+            document.getElementById('options1').style.display = 'block';
+        } else {
+            window.alert('password yang anda masukan salah')
+        }
+    }
+   
+
+    function cek() {
+        document.getElementById('saldo').innerHTML = `saldo :${saldo}-,`;
+    }
+
+    ///menampilkan setor tunai
+    function fsetor(){
+        let sal = alert("transaksi sukses")+ confirm("apakah ingin transaksi lagi? \n jika ya masukan lagi nilai nominal");
+        if (saldo += parseInt(document.getElementById ('setor').value));
+        frefresh();{sal}
+    }
+
+    ///untuk menampilkan tarik tunai
+    function ftarik(){
+        if(saldo - parseInt(document.getElementById('tarik').value) < 50000){
+            alert('maaf saldo anda tidak cukup')
+        }
+        else{
+            saldo -= parseInt(document.getElementById('tarik').value);
+            alert("Trasaksi sukes")+confirm("Apakah anda Transaksi lagi?jika iya masukan lagi nilai Nominal yang anda ingin kan!")
+        }
+    }
+    frefresh();
+
+    ///untuk nabung
+    function fnabung(){
+        saldo += parseInt(document.getElementById('nabung').value);
+        alert("Trasaksi sukes")+confirm("Apakah anda Transaksi lagi?jika iya masukan lagi nilai Nominal yang anda ingin kan!")
+    }
+  function exit() {
+      let ajg = confirm('apakah anda ingin keluar ?')
+      if (ajg==true) {
+        document.getElementById('options1').style.opacity = 0;
+      } else {
+        document.getElementById('options1').style.opacity = 10;
+      }
+      }
+  
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function canvote(age) {
+          return age >= 18;
+      }
+      function func(){
+          var filtred = [24, 33, 16, 40].filter(canvote);
+          document.write(filtred);
+      }
+      func();
+    </script>
+</body>
+</html>

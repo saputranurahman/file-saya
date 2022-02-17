@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function persegipanjang(panjang,lebar){
+            let jumlah = panjang * lebar;
+            document.writeln(`<p>jika persegi panjang memiliki panjang ${panjang}cm dan lebar ${lebar}cm maka hasilnya adalah ${jumlah}cm </p>`);
+        }
+        function segitigasamasikus(alas,tinggi){
+            let jumlah =  alas * tinggi /2;
+            document.writeln(`<p>jika segitiga siku siku memiliki alas ${alas}cm dan tinggi ${tinggi}cm maka hasilnya adalah ${jumlah}cm </p>`)
+        }
+        function lingkaran(jarijari){
+            let jumlah = jarijari * jarijari * 22/7;
+            document.write(`<p>jika jari jari segitiga nya adalah ${jarijari} dan jarijari ${jarijari} maka hasilnya ${jumlah}    </p>`)
+        }
+        persegipanjang(10 , 10);
+        segitigasamasikus(10 , 10);
+        lingkaran(14);
+    </script>
+</body>
+</html>
